@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 streamlit
 pandas
 numpy
 scikit-learn
 xgboost
 tensorflow==2.15.0
+=======
+streamlit
+pandas
+numpy
+scikit-learn
+xgboost
+tensorflow==2.15.0
+>>>>>>> ebe9f24140bb5762898637a250130c60d0b05152
 joblib

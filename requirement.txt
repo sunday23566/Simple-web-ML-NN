@@ -3,5 +3,5 @@ pandas
 numpy
 scikit-learn
 xgboost
-tensorflow
+tensorflow==2.15.0
 joblib

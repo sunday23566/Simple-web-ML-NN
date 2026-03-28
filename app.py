@@ -41,7 +41,7 @@ esrb_images = {
     "E": "https://www.esrb.org/wp-content/uploads/2019/05/E.svg",
     "ET": "https://www.esrb.org/wp-content/uploads/2019/05/E10plus.svg",
     "T": "https://www.esrb.org/wp-content/uploads/2019/05/T.svg",
-    "M": "https://www.esrb.org/wp-content/uploads/2019/05/T.svg",
+    "M": "https://www.esrb.org/wp-content/uploads/2019/05/M.svg",
     "AO": "https://www.esrb.org/wp-content/uploads/2019/05/AO.svg"
 }
 
@@ -147,13 +147,13 @@ with tab3:
 
             # UI ความมั่นใจใหม่ (สวยมากขึ้น)
             st.subheader("📊 ความมั่นใจของการทำนาย")
-            col_hit, col_flop = st.columns(2)
-            with col_hit:
-                st.metric(label="🎯 HIT", value=f"{hit_prob:.1f}%", delta=None)
+            c1, c2 = st.columns(2)
+            with c1:
+                st.metric(label="🎯 HIT", value=f"{hit_prob:.1f}%")
                 st.progress(hit_prob / 100)
-            with col_flop:
-                st.metric(label="📉 FLOP", value=f"{flop_prob:.1f}%", delta=None)
-                st.progress(flop_prob / 100, key="flop-bar")
+            with c2:
+                st.metric(label="📉 FLOP", value=f"{flop_prob:.1f}%")
+                st.progress(flop_prob / 100)
 
 # ===================== TAB 4: NN + ความมั่นใจสวยขึ้น =====================
 with tab4:
@@ -202,4 +202,4 @@ with tab4:
                 elif rating == "M": st.write("เหมาะสำหรับอายุ 17 ปีขึ้นไป (Mature)")
                 elif rating == "AO": st.write("สำหรับผู้ใหญ่เท่านั้น")
 
-st.caption("Video Game Success Predictor | Project IS 2568 | Deployed on Streamlit Community Cloud")
+st.caption("Video Game Success Predictor | Project 2568 | Deployed on Streamlit Community Cloud")
